@@ -1,0 +1,88 @@
+:root {
+    --main: #71c9ce;
+    --secondary: #ffde7d;
+    --black: #222831;
+    --light: #dbe2ef;
+    --main-dark: #364f6b;
+    --light-dark: #f6f5f5;
+    --darker: #DDDD;
+}
+
+.sporteens-main {
+    color: var(--main);
+}
+
+.sporteens-main-dark {
+    color: var(--main-dark);
+}
+
+.sporteens-secondary {
+    color: var(--secondary);
+}
+
+.sporteens-black {
+    color: var(--black);
+}
+
+.sporteens-light {
+    color: var(--light);
+}
+
+.sporteens-light-dark {
+    color: var(--light-dark);
+}
+
+.sporteens-bg-main {
+    background-color: var(--main);
+}
+
+.sporteens-bg-main-dark {
+    background-color: var(--main-dark);
+}
+
+.sporteens-bg-secondary {
+    background-color: var(--secondary);
+}
+
+.sporteens-bg-black {
+    background-color: var(--black);
+}
+
+.sporteens-bg-light {
+    background-color: var(--light);
+}
+
+.sporteens-bg-light-dark {
+    background-color: var(--light-dark);
+}
+
+.f-darker {
+    background-color: var(--darker);
+}
+
+
+/* Fonts */
+
+.sporteens-font-8 {
+    font-size: 8px;
+}
+
+.sporteens-font-10 {
+    font-size: 10px;
+}
+
+.sporteens-font-12 {
+    font-size: 12px;
+}
+
+.sporteens-font-14 {
+    font-size: 14px;
+}
+
+.sporteens-font-16 {
+    font-size: 16px;
+}
+
+.sporteens-font-20 {
+    font-size: 20px;
+}
