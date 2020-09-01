@@ -9,7 +9,7 @@ import Axios from "axios";
 class RegisterPage extends Component {
   state = {
     errorMessage: "",
-    data: true,
+    data: null,
   };
 
   onSubmitClick = () => {
@@ -17,12 +17,8 @@ class RegisterPage extends Component {
     var value = this.refs.emailorPhone.value;
 
     if (Number(value[0]) >= 0) {
-      this.getData(value);
-      if (this.state.data === true) {
-      }
       var phoneValidatorResult = PhoneNumberValidator(value);
       if (phoneValidatorResult === true) {
-        alert("berhasil");
         this.sendDataToApi({ phone: value, email: "" });
         // kirim ke api
       } else {
@@ -31,7 +27,6 @@ class RegisterPage extends Component {
       }
     } else {
       if (EmailValidator(value) === true) {
-        alert("berhasil");
         this.sendDataToApi({ email: value, phone: "" });
 
         // kirim ke api
@@ -50,25 +45,36 @@ class RegisterPage extends Component {
     var dataToSend = data;
     dataToSend.password = "";
 
-    Axios.post(ApiUrl + "users", dataToSend)
-      .then((res) => {
-        console.log(res);
-        alert("register success");
-        window.location = `/create-pass/${res.data.id}`;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+    var datatype = data.phone ? "phone" : "email";
+    var datavalue = data.phone ? data.phone : data.email;
 
-  getData = (input) => {
-    Axios.get(ApiUrl + "users").then((res) =>
-      res.data.filter((v) =>
-        v.phone === input
-          ? this.setState({ data: true })
-          : this.setState({ data: false }),
-      ),
-    );
+    console.log(datatype);
+    console.log(datavalue);
+
+    Axios.get(ApiUrl + "users?" + datatype + "=" + datavalue)
+      .then((res) => {
+        if (res.data.length === 0) {
+          Axios.post(ApiUrl + "users", dataToSend)
+            .then((res) => {
+              console.log(res);
+              alert("register success");
+              window.location = "/create-pass/" + res.data.id;
+              localStorage.setItem("id", res.data.id);
+            })
+            .catch((err) => {
+              this.setState({ errorMessage: err.message });
+            });
+          // available
+        } else {
+          this.setState({
+            errorMessage: datatype + " already taken, try another !!!!",
+          });
+        }
+      })
+
+      .catch((err) => {
+        this.setState({ errorMessage: err.message });
+      });
   };
 
   render() {

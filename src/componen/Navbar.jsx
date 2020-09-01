@@ -2,26 +2,123 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../supports/css/Utils.css";
+import { Link } from "react-router-dom";
+import Axios from "axios";
+import ApiUrl from "../supports/constant/apiUrl";
 
 class Navbar extends Component {
   state = {
     openToggle: false,
+    isLogin: false,
+    data: null,
+  };
+
+  componentDidMount() {
+    this.getIdUser();
+  }
+
+  onLogout = () => {
+    if (window.confirm("are you sure want to logout??")) {
+      localStorage.removeItem("id");
+      window.location = "/";
+    }
+  };
+
+  getIdUser = () => {
+    var id = localStorage.getItem("id");
+    console.log(id);
+    if (id) {
+      this.setState({ isLogin: true });
+      Axios.get(ApiUrl + "users/" + id)
+        .then((res) => {
+          if (res.data.email) {
+            this.setState({ data: res.data.email });
+          } else {
+            this.setState({ data: res.data.phone });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          alert(err.message);
+        });
+    } else {
+      this.setState({ isLogin: false });
+    }
+    // get value di localstorage
+    // kalau value ada
+    // set is login = true
   };
   render() {
     return (
-      <div className="sporteens-bg-black py-4">
+      <div className="sporteens-bg-main-dark py-4">
         <div className="container">
           <div className="row justify-content-between px-4">
-            <div className="sporteens-light sporteens-logo-header sporteens-clickable-el">
-              Logo
-            </div>
-            <div className="sporteens-light sporteens-items-header d-none d-md-block">
-              <span className="mr-md-3 sporteens-clickable-el ">Home</span>
-              <span className="mr-md-3 sporteens-clickable-el ">Products</span>
-              <span className="mr-md-3 sporteens-clickable-el">Brands</span>
-              <span className="mr-md-3 sporteens-clickable-el">Cart</span>
+            {/* Header Logo */}
+            <div className="sporteens-light sporteens-logo-header sporteens-clickable-el ">
+              <Link to="/" className="sporteens-link">
+                Logo
+              </Link>
             </div>
 
+            {/* Header Items */}
+            <div className="sporteens-light sporteens-items-header d-none d-md-block">
+              <span className="mr-md-3 sporteens-clickable-el">
+                <Link to="/" className="sporteens-link">
+                  Home
+                </Link>
+              </span>
+              <span className="mr-md-3 sporteens-clickable-el">
+                <Link to="/products" className="sporteens-link">
+                  Products
+                </Link>
+              </span>
+              <span className="mr-md-3 sporteens-clickable-el">
+                <Link to="/brands" className="sporteens-link">
+                  Brands
+                </Link>
+              </span>
+
+              {this.state.isLogin ? (
+                <span>
+                  <span className="mr-md-3 sporteens-clickable-el">
+                    <Link to="/cart" className="sporteens-link">
+                      Cart
+                    </Link>
+                  </span>
+                  <span className="d-inline-block mr-md-3 sporteens-clickable-el">
+                    <img
+                      width="30px"
+                      className="mr-2"
+                      src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png"
+                      alt="avatar-circle"
+                    />
+                    <Link
+                      onClick={this.onLogout}
+                      className="sporteens-link h-100 d-inline-block"
+                    >
+                      {this.state.data
+                        ? this.state.data.slice(0, 4) + "..."
+                        : null}
+                    </Link>
+                  </span>
+                </span>
+              ) : (
+                <span>
+                  <span className="mr-md-3 sporteens-clickable-el">
+                    <Link to="/register" className="sporteens-link">
+                      Login
+                    </Link>
+                  </span>
+                  <span className="mr-md-3 sporteens-clickable-el">
+                    <Link to="/register" className="sporteens-link">
+                      Register
+                    </Link>
+                  </span>
+                </span>
+              )}
+            </div>
+
+            {/* Header Icons Mobile */}
             <div className="sporteens-light sporteens-items-mobile d-md-none">
               {this.state.openToggle ? (
                 <span
@@ -40,14 +137,22 @@ class Navbar extends Component {
               )}
             </div>
           </div>
+
+          {/* Header Items Mobile */}
           {this.state.openToggle ? (
             <div className="sporteens-light sporteens-header-items-mobile px-2 d-md-none">
-              <div className="border-bottom  sporteens-clickable-el">Home</div>
-              <div className="border-bottom sporteens-clickable-el">
+              <div className="mt-3 border-bottom sporteens-clickable-el">
+                Home
+              </div>
+              <div className="mt-3 border-bottom sporteens-clickable-el">
                 Products
               </div>
-              <div className="border-bottom sporteens-clickable-el">Brands</div>
-              <div className="border-bottom sporteens-clickable-el">Carts</div>
+              <div className="mt-3 border-bottom sporteens-clickable-el">
+                Brands
+              </div>
+              <div className="mt-3 border-bottom sporteens-clickable-el">
+                Carts
+              </div>
             </div>
           ) : null}
         </div>

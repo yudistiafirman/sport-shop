@@ -1,40 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "phone": "0822274821",
-      "email": "",
-      "password": "123123"
-    },
-    {
-      "email": "yudistia.firman@yahoo.com",
-      "phone": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "phone": "091876900",
-      "email": "",
-      "password": "",
-      "id": 4
-    },
-    {
       "email": "yudistia.firman@gmail.com",
       "phone": "",
       "password": "",
       "id": 5
-    },
-    {
-      "email": "yudistia@firman.com",
-      "phone": "",
-      "password": "yuyuyu",
-      "id": 6
-    },
-    {
-      "phone": "085675890",
-      "email": "",
-      "password": "55555",
-      "id": 7
     },
     {
       "phone": "08122089655",
@@ -45,140 +15,56 @@
     {
       "phone": "08122089655",
       "email": "",
-      "password": "",
+      "password": "123",
       "id": 9
     },
     {
       "phone": "08122089655",
       "email": "",
-      "password": "",
+      "password": "123123",
       "id": 10
     },
     {
       "phone": "08122089655",
       "email": "",
-      "password": "",
+      "password": "123",
       "id": 11
     },
     {
       "phone": "08122089655",
       "email": "",
-      "password": "",
+      "password": "123123",
       "id": 12
     },
     {
-      "phone": "08122089655",
+      "phone": "087675890876",
       "email": "",
       "password": "",
       "id": 13
     },
     {
-      "phone": "08122089655",
+      "phone": "0999999999999",
       "email": "",
-      "password": "123123",
+      "password": "",
       "id": 14
     },
     {
-      "phone": "08122089655",
+      "phone": "0987555555555",
       "email": "",
       "password": "",
       "id": 15
     },
     {
-      "phone": "08122089655",
+      "phone": "09876855555",
       "email": "",
       "password": "123123",
       "id": 16
     },
     {
-      "phone": "08122089655",
+      "phone": "098555599955",
       "email": "",
       "password": "",
       "id": 17
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "",
-      "id": 18
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "",
-      "id": 19
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "",
-      "id": 20
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123123",
-      "id": 21
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123123",
-      "id": 22
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123123",
-      "id": 23
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123123",
-      "id": 24
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123",
-      "id": 25
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123",
-      "id": 26
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "",
-      "id": 27
-    },
-    {
-      "phone": "08922189766",
-      "email": "",
-      "password": "123",
-      "id": 28
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123",
-      "id": 29
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123123",
-      "id": 30
-    },
-    {
-      "phone": "098765134134",
-      "email": "",
-      "password": "123123",
-      "id": 31
     }
   ],
   "products": [

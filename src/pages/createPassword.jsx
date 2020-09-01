@@ -52,10 +52,6 @@ export class CreatePassword extends Component {
     }
   };
 
-  onvalSubmit = () => {
-    Axios.get(apiUrl).then((res) => console.log(res.s));
-  };
-
   render() {
     return (
       <div className="py-5 px-3">
