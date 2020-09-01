@@ -1,106 +1,109 @@
 {
-    "users": [{
-            "email": "yudistia.firman@gmail.com",
-            "phone": "",
-            "password": "",
-            "id": 5
-        },
-        {
-            "phone": "08122089655",
-            "email": "",
-            "password": "123",
-            "id": 8
-        }
-
-    ],
-    "products": [{
-            "id": 1,
-            "name": "Nike Air Jordan 1 Retro High OBSIDIAN",
-            "price": 20000000,
-            "discount": 10,
-            "image1": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-4124599/nike_nike_air_jordan_1_retro_high_og_obsidian_sneakers_pria_full04.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 2,
-            "name": " Nike Air Jordan 1 Retro High OG GYM RED ",
-            "price": 8770000,
-            "discount": 10,
-            "image1": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/23/13467656/13467656_749eeca7-ce34-4f9b-b4b2-f24b88005af2_800_800.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 3,
-            "name": " Jordan New Beginnings  Nike Air Ship ",
-            "price": 28770000,
-            "discount": 10,
-            "image1": "https://stockx.imgix.net/Air-Jordan-New-Beginnings-Pack-1-Nike-Air-Ship-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1581110770",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 4,
-            "name": " nike air jordan 3 chicago all spiderman ",
-            "price": 28770000,
-            "discount": 10,
-            "image1": "https://cdn.webshopapp.com/shops/282647/files/318189822/750x750x1/jordan-nike-air-jordan-retro-3-chicago-all-star-re.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 5,
-            "name": " nike air jordan 3 mid shoe ",
-            "price": 3477000,
-            "discount": 10,
-            "image1": "https://static.nike.com/a/images/t_default/i1-a1baccb1-c212-499d-b194-bfe6044699e8/air-jordan-1-mid-shoe-1zMCFJ.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 6,
-            "name": " Jordan 1 Retro high twist ",
-            "price": 8477000,
-            "discount": 10,
-            "image1": "https://stockx.imgix.net/Air-Jordan-1-Retro-High-Black-White-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1559089846",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 7,
-            "name": " Buty Nike Air Jordan Jumpman Diamond ",
-            "price": 9560000,
-            "discount": 10,
-            "image1": "https://www.globsport24.com/8386-large_default/buty-nike-air-jordan-jumpman-diamond-mid-ci1204-009.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        },
-        {
-            "id": 8,
-            "name": " nike air jordan 4 retron 'Bred 2019 Release' ",
-            "price": 34770000,
-            "discount": 10,
-            "image1": "https://larrydeadstock.com/9561/nike-air-jordan-4-retro-bred-2019-release-.jpg",
-            "image2": "url2",
-            "image3": "",
-            "brand": "Nike",
-            "stock": 5
-        }
-
-    ]
+  "users": [
+    {
+      "email": "yudistia.firman@gmail.com",
+      "phone": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "phone": "08122089655",
+      "email": "",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "phone": "098744474999",
+      "email": "",
+      "password": "",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Air Jordan 1 Retro High OBSIDIAN",
+      "price": 20000000,
+      "discount": 20,
+      "image1": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-4124599/nike_nike_air_jordan_1_retro_high_og_obsidian_sneakers_pria_full04.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "name": " Nike Air Jordan 1 Retro High OG GYM RED ",
+      "price": 8770000,
+      "discount": 10,
+      "image1": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/23/13467656/13467656_749eeca7-ce34-4f9b-b4b2-f24b88005af2_800_800.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": " Jordan New Beginnings  Nike Air Ship ",
+      "price": 28770000,
+      "discount": 20,
+      "image1": "https://stockx.imgix.net/Air-Jordan-New-Beginnings-Pack-1-Nike-Air-Ship-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1581110770",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 4,
+      "name": " nike air jordan 3 chicago  King Marcus IX",
+      "price": 28770000,
+      "discount": 30,
+      "image1": "https://cdn.webshopapp.com/shops/282647/files/318189822/750x750x1/jordan-nike-air-jordan-retro-3-chicago-all-star-re.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 5,
+      "name": " nike air jordan 3 mid shoe Sakuragi Hanamichi ",
+      "price": 3477000,
+      "discount": 40,
+      "image1": "https://static.nike.com/a/images/t_default/i1-a1baccb1-c212-499d-b194-bfe6044699e8/air-jordan-1-mid-shoe-1zMCFJ.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 6,
+      "name": " Jordan 1 Retro high twist ",
+      "price": 8477000,
+      "image1": "https://stockx.imgix.net/Air-Jordan-1-Retro-High-Black-White-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1559089846",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 7,
+      "name": " Buty Nike Air Jordan Jumpman Diamond ",
+      "price": 9560000,
+      "image1": "https://www.globsport24.com/8386-large_default/buty-nike-air-jordan-jumpman-diamond-mid-ci1204-009.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    },
+    {
+      "id": 8,
+      "name": " nike air jordan 4 retron 'Bred 2019 Release' ",
+      "price": 34770000,
+      "image1": "https://larrydeadstock.com/9561/nike-air-jordan-4-retro-bred-2019-release-.jpg",
+      "image2": "url2",
+      "image3": "",
+      "brand": "Nike",
+      "stock": 5
+    }
+  ]
 }
