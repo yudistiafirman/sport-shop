@@ -11,6 +11,7 @@ import RegisterPage from "./pages/registerPage.jsx";
 // import ProductDetails from "./pages/productDetails";
 import CompFooter from "./componen/Footer";
 import CreatePassword from "./pages/createPassword";
+import ListProduct from "./pages/listProduct";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/create-pass" component={CreatePassword} />
           <Route path="/brands" component={Brand} />
           <Route path="/carts" component={Cart} />
+          <Route path="/list-product" component={ListProduct} />
         </Switch>
         <CompFooter />
       </div>

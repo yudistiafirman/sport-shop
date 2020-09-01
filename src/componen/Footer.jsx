@@ -3,9 +3,9 @@ import "../supports/css/Utils.css";
 
 export default function CompFooter() {
   return (
-    <div className="py-5 px-3 sporteens-bg-black">
+    <div className="py-5 px-3 sporteens-bg-black  ">
       <div className="container border-top p-4">
-        <div className="row ">
+        <div className="row  ">
           <div className="col-md-3">
             <p className="sporteens-main-dark font-weight-bold p-0 m-0">
               {" "}

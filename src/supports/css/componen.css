@@ -62,19 +62,18 @@
     /* Product list componen */
     
     .product-list-height {
-        height: 150px;
-        width: 100px
+        height: 50%;
     }
     
     .product-list-title-font {
         font-family: Helvetica Neue;
-        font-size: 10px;
+        font-size: 20px;
         color: #707070
     }
     
     .product-list-price-font {
         font-family: Helvetica Neue;
-        font-size: 9px;
+        font-size: 18px;
         color: #A0A0A0
     }
     /* product details product */
@@ -106,6 +105,11 @@
     
     my-gradient {
         background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ;
+    }
+    
+    .my-position {
+        position: relative;
+        bottom: 0;
     }
     /* responsive */
     

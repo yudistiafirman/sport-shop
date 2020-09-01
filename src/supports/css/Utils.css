@@ -86,3 +86,12 @@
 .sporteens-font-20 {
     font-size: 20px;
 }
+
+.sporteens-link {
+    color: inherit;
+}
+
+.sporteens-link:hover {
+    text-decoration: none;
+    color: inherit;
+}

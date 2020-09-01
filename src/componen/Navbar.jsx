@@ -50,7 +50,7 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <div className="sporteens-bg-main-dark py-4">
+      <div className="sporteens-bg-main-dark py-4 ">
         <div className="container">
           <div className="row justify-content-between px-4">
             {/* Header Logo */}
@@ -68,7 +68,7 @@ class Navbar extends Component {
                 </Link>
               </span>
               <span className="mr-md-3 sporteens-clickable-el">
-                <Link to="/products" className="sporteens-link">
+                <Link to="/list-product" className="sporteens-link">
                   Products
                 </Link>
               </span>
