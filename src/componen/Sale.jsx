@@ -17,7 +17,7 @@ class Sale extends Component {
   getDiscount = () => {
     Axios.get(ApiUrl + "products")
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
         this.setState({ discount: res.data });
       })
       .catch((err) => console.log(err));

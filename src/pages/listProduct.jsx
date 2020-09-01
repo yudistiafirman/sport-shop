@@ -19,7 +19,7 @@ class ListProduct extends Component {
   getDataProducts = () => {
     Axios.get(ApiUrl + "products")
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
         this.setState({ content: res.data });
       })
       .catch((err) => console.log(err));
