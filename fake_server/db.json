@@ -1,109 +1,338 @@
 {
-  "users": [
-    {
-      "email": "yudistia.firman@gmail.com",
-      "phone": "",
-      "password": "",
-      "id": 5
-    },
-    {
-      "phone": "08122089655",
-      "email": "",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "phone": "098744474999",
-      "email": "",
-      "password": "123123",
-      "id": 9
-    }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "name": "Nike Air Jordan 1 Retro High OBSIDIAN",
-      "price": 20000000,
-      "discount": 20,
-      "image1": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-4124599/nike_nike_air_jordan_1_retro_high_og_obsidian_sneakers_pria_full04.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 2,
-      "name": " Nike Air Jordan 1 Retro High OG GYM RED ",
-      "price": 8770000,
-      "discount": 10,
-      "image1": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/23/13467656/13467656_749eeca7-ce34-4f9b-b4b2-f24b88005af2_800_800.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 3,
-      "name": " Jordan New Beginnings  Nike Air Ship ",
-      "price": 28770000,
-      "discount": 20,
-      "image1": "https://stockx.imgix.net/Air-Jordan-New-Beginnings-Pack-1-Nike-Air-Ship-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1581110770",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 4,
-      "name": " nike air jordan 3 chicago  King Marcus IX",
-      "price": 28770000,
-      "discount": 30,
-      "image1": "https://cdn.webshopapp.com/shops/282647/files/318189822/750x750x1/jordan-nike-air-jordan-retro-3-chicago-all-star-re.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 5,
-      "name": " nike air jordan 3 mid shoe Sakuragi Hanamichi ",
-      "price": 3477000,
-      "discount": 40,
-      "image1": "https://static.nike.com/a/images/t_default/i1-a1baccb1-c212-499d-b194-bfe6044699e8/air-jordan-1-mid-shoe-1zMCFJ.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 6,
-      "name": " Jordan 1 Retro high twist ",
-      "price": 8477000,
-      "image1": "https://stockx.imgix.net/Air-Jordan-1-Retro-High-Black-White-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1559089846",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 7,
-      "name": " Buty Nike Air Jordan Jumpman Diamond ",
-      "price": 9560000,
-      "image1": "https://www.globsport24.com/8386-large_default/buty-nike-air-jordan-jumpman-diamond-mid-ci1204-009.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    },
-    {
-      "id": 8,
-      "name": " nike air jordan 4 retron 'Bred 2019 Release' ",
-      "price": 34770000,
-      "image1": "https://larrydeadstock.com/9561/nike-air-jordan-4-retro-bred-2019-release-.jpg",
-      "image2": "url2",
-      "image3": "",
-      "brand": "Nike",
-      "stock": 5
-    }
-  ]
+    "users": [{
+            "email": "yudistia.firman@gmail.com",
+            "phone": "",
+            "password": "",
+            "id": 5
+        },
+        {
+            "phone": "08122089655",
+            "email": "",
+            "password": "123",
+            "id": 8
+        },
+        {
+            "phone": "098744474999",
+            "email": "",
+            "password": "123123",
+            "id": 9
+        }
+    ],
+    "products": [{
+            "id": 1,
+            "name": "Nike Air Jordan 1 Retro High OBSIDIAN",
+            "price": 20000000,
+            "discount": 20,
+            "image1": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-4124599/nike_nike_air_jordan_1_retro_high_og_obsidian_sneakers_pria_full04.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 2,
+            "name": " Nike Air Jordan 1 Retro High OG GYM RED ",
+            "price": 8770000,
+            "discount": 10,
+            "image1": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/23/13467656/13467656_749eeca7-ce34-4f9b-b4b2-f24b88005af2_800_800.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 3,
+            "name": " Jordan New Beginnings  Nike Air Ship ",
+            "price": 28770000,
+            "discount": 20,
+            "image1": "https://stockx.imgix.net/Air-Jordan-New-Beginnings-Pack-1-Nike-Air-Ship-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1581110770",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 4,
+            "name": " nike air jordan 3 chicago  King Marcus IX",
+            "price": 28770000,
+            "discount": 30,
+            "image1": "https://cdn.webshopapp.com/shops/282647/files/318189822/750x750x1/jordan-nike-air-jordan-retro-3-chicago-all-star-re.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 5,
+            "name": " nike air jordan 3 mid shoe Sakuragi  ",
+            "price": 3477000,
+            "discount": 40,
+            "image1": "https://static.nike.com/a/images/t_default/i1-a1baccb1-c212-499d-b194-bfe6044699e8/air-jordan-1-mid-shoe-1zMCFJ.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 6,
+            "name": " Jordan 1 Retro high twist ",
+            "price": 8477000,
+            "image1": "https://stockx.imgix.net/Air-Jordan-1-Retro-High-Black-White-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1559089846",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 7,
+            "name": " Buty Nike Air Jordan Jumpman Diamond ",
+            "price": 9560000,
+            "image1": "https://www.globsport24.com/8386-large_default/buty-nike-air-jordan-jumpman-diamond-mid-ci1204-009.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+        {
+            "id": 8,
+            "name": " nike air jordan 4 retron 'Bred 2019 Release' ",
+            "price": 34770000,
+            "image1": "https://larrydeadstock.com/9561/nike-air-jordan-4-retro-bred-2019-release-.jpg",
+            "image2": "url2",
+            "image3": "",
+            "brand": "Nike",
+            "stock": 5
+        },
+
+        {
+            "id": 8,
+            "name": "Nike Superfly VII Elite FG x Sancho-Racher Blue/White/Arora",
+            "brand": "Nike",
+            "category": "Football Boots",
+            "price": 4350000,
+
+            "Stock": 25,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/223585_Main_Thumb_0762387.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_2/223585_Gallery_2_0762390.jpg",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/223585_Gallery_1_0762388.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Nike Phantom GT Elite FG-White/Pink Blast/Black",
+            "brand": "Nike",
+            "category": "Football Boots",
+            "price": 4350000,
+            "discount": 25,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/226169_Main_Thumb_0746246.jpg",
+            "image2": "https://www.prodirectsoccer.com/us/productimages/V3_1_Gallery_5/226169.jpg",
+            "image3": "https://www.prodirectsoccer.com/us/productimages/V3_1_Gallery_2/226169.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Adidas Predator Mutator 20+ FG-Core/Black/Pink",
+            "brand": "Adidas",
+            "category": "Football Boots",
+            "price": 4550000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/221567_Main_0730747.jpg",
+            "image2": "https://www.prodirectrugby.com/productimages/V3_1_Gallery_5/221567_Gallery_5_0730756.jpg",
+            "image3": "https://www.prodirectrugby.com/productimages/V3_1_Gallery_1/221567_Gallery_1_0730749.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Adidas X Ghosted FG-White/Metalic Gold/Core Black",
+            "brand": "Adidas",
+            "category": "Football Boots",
+            "price": 4550000,
+            "discount": 35,
+            "Stock": 25,
+            "image1": "https://www.prodirectsoccer.com/us/productimages/V3_1_Main/226471.jpg",
+            "image2": "https://www.prodirectsoccer.com/us/productimages/V3_1_Gallery_5/226471.jpg",
+            "image3": "https://www.prodirectsoccer.com/us/productimages/V3_1_Gallery_3/226471.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Adidas Nemeziz .3 Laceless IN-Signal Coral/Core Black/Solar",
+            "brand": "Adidas",
+            "category": "Futsal Boots",
+            "price": 1475000,
+            "discount": 45,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/226501_Main_Thumb_0738624.jpg",
+            "image2": "https://www.prodirectsoccer.com/nl/productimages/V3_1_Gallery_5/226501_Gallery_5_0738641.jpg",
+            "image3": "https://www.prodirectsoccer.com/nl/productimages/V3_1_Gallery_5/226501_Gallery_5_0738641.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Nike Mercurial VII Academy IC-Black/Black/Dark Smoke",
+            "brand": "Nike",
+            "category": "Futsal Boots",
+            "price": 1600000,
+
+            "Stock": 10,
+            "image1": "https://www.futbolemotion.com/imagesarticulos/145816/grandes/zapatilla-nike-mercurial-superfly-vii7-academy-ic-black-black-dark-smoke-grey-chile-red-0.jpg",
+            "image2": "https://www.futbolemotion.com/imagesarticulos/145816/grandes/zapatilla-nike-mercurial-superfly-vii7-academy-ic-black-black-dark-smoke-grey-chile-red-1.jpg",
+            "image3": "https://www.futbolemotion.com/imagesarticulos/145816/grandes/zapatilla-nike-mercurial-superfly-vii7-academy-ic-black-black-dark-smoke-grey-chile-red-2.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Adidas Nemeziz Messi .3 IN-Team Royal Blue/Silver",
+            "brand": "Adidas",
+            "category": "Futsal Boots",
+            "price": 1475000,
+            "discount": 25,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Gallery_5/226400_Gallery_5_0736006.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_5/226400_Gallery_5_0736006.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/226400_Gallery_3_0736002.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 15,
+            "name": "New Balance Audazo Pro IN-Neutral Indigo",
+            "brand": "New Balance",
+            "category": "Futsal Boots",
+            "price": 1600000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/223912_Main_0735685.jpg",
+            "image2": "https://www.prodirectsoccer.com/de/productimages/V3_1_Gallery_1/223912_Gallery_1_0735686.jpg",
+            "image3": "https://thumblr.uniid.it/product/207022/d2202e15c4bc.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Nike Lunar Gato II-Vast Grey/Black/Pink Blast",
+            "brand": "Nike",
+            "category": "Futsal Boots",
+            "price": 2250000,
+            "discount": 10,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/226364_Main_Thumb_0729243.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_5/226364_Gallery_5_0729251.jpg",
+            "image3": "https://www.prodirectsoccer.com/productimages/V3_1_Gallery_1/226364_Gallery_1_0729247.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Puma Borussia Dortmunt 20/21 Cup Shirt-Cyber Yellow/Puma",
+            "brand": "Puma",
+            "category": "Jersey Shirts",
+            "price": 1250000,
+            "discount": 10,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/228865_Main_0758601.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Main/228865_Main_0758601.jpg",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Main/228865_Main_0758601.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Adidas Manchester United 20/21 Home Shirt-Real Red",
+            "brand": "Adidas",
+            "category": "Jersey Shirts",
+            "price": 1550000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/224395_Main_0747961.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Main/224395_Main_0747961.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Main/224395_Main_0747961.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 19,
+            "name": "Adidas Juventus 20/21 Youths Third Shirt-Bahia Orange",
+            "brand": "Adidas",
+            "category": "Jersey Shirts",
+            "price": 1150000,
+            "discount": 10,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/224366_Main_0762559.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Main/224366_Main_0762559.jpg",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Main/224366_Main_0762559.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Adidas Bayern Munich 20/21 Youths Home Shirt-FCB True Red",
+            "brand": "Adidas",
+            "category": "Jersey Shirts",
+            "price": 1550000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/219453_Main_Thumb_0725756.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Main/219453_Main_Thumb_0725756.jpg",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Main/219453_Main_Thumb_0725756.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Puma AC Milan 20/21 Stadium Third Shirt-Deep Lagon/Gribaltar",
+            "brand": "Puma",
+            "category": "Jersey Shirts",
+            "price": 2550000,
+            "discount": 10,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/227031_Main_Thumb_0756342.jpg",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Main/227031_Main_Thumb_0756342.jpg",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Main/227031_Main_Thumb_0756342.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Sells Pro Wap-Black Aqua Blue",
+            "brand": "Sells",
+            "category": "Gloves",
+            "price": 1100000,
+            "discount": 45,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/216104_Main_Thumb_0639260.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/216104_Gallery_1_0639269.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/216104_Gallery_3_0639281.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 23,
+            "name": "Adidas Predator Pro-Core Black/Pink",
+            "brand": "Sells",
+            "category": "Gloves",
+            "price": 2000000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/221570_Main_0731299.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/221570_Gallery_1_0731300.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/221570_Gallery_3_0731303.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 24,
+            "name": "Nike GK Grip .3-Black",
+            "brand": "Nike",
+            "category": "Gloves",
+            "price": 900000,
+            "discount": 10,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/226826_Main_0741230.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/226826_Gallery_1_0741231.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/226826_Gallery_3_0741233.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 25,
+            "name": "Uhlsport Pure Alliance Supergrip+-White/Fluo Yellow",
+            "brand": "Uhlsport",
+            "category": "Gloves",
+            "price": 2500000,
+
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/217720_Main_Thumb_0745688.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/217720_Gallery_1_0745749.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/217720_Gallery_3_0745768.jpg?impolicy=thumb&imwidth=512"
+        },
+        {
+            "id": 26,
+            "name": "Nike GK Vapor Grip-Pink Blast/Black/Metallic Silver",
+            "brand": "Nike",
+            "stock": 5,
+            "category": "Gloves",
+            "price": 3500000,
+            "discount": 45,
+            "Stock": 10,
+            "image1": "https://www.prodirectsoccer.com/ProductImages/Main/226904_Main_Thumb_0746064.jpg?impolicy=thumb&imwidth=512",
+            "image2": "https://www.prodirectsoccer.com/ProductImages/Gallery_1/226904_Gallery_1_0746065.jpg?impolicy=thumb&imwidth=512",
+            "image3": "https://www.prodirectsoccer.com/ProductImages/Gallery_3/226904_Gallery_3_0746067.jpg?impolicy=thumb&imwidth=512"
+        }
+    ]
 }

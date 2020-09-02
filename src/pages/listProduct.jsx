@@ -58,7 +58,7 @@ class ListProduct extends Component {
                   />
                   <div className="card-body">
                     <div className=" font-weight-bold product-list-title-font text-left">
-                      {v.name}
+                      {v.name.slice(0, 20)}
                     </div>
                     <div className=" product-list-price-font">
                       {`${this.state.idr} ${v.price}`}

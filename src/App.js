@@ -8,7 +8,7 @@ import Landingpage from "./pages/Landingpage";
 import Brand from "./pages/Brand";
 import Cart from "./pages/Cart";
 import RegisterPage from "./pages/registerPage.jsx";
-// import ProductDetails from "./pages/productDetails";
+import ProductDetails from "./pages/productDetails";
 import CompFooter from "./componen/Footer";
 import CreatePassword from "./pages/createPassword";
 import ListProduct from "./pages/listProduct";
@@ -25,6 +25,7 @@ function App() {
           <Route path="/brands" component={Brand} />
           <Route path="/carts" component={Cart} />
           <Route path="/list-product" component={ListProduct} />
+          <Route path="/product-details/:bebas" component={ProductDetails} />
         </Switch>
         <CompFooter />
       </div>
