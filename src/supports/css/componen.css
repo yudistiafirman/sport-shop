@@ -1,150 +1,199 @@
-    .sporteens-clickable-el {
-        cursor: pointer;
-        -webkit-user-select: none;
-        /* Safari */
-        -moz-user-select: none;
-        /* Firefox */
-        -ms-user-select: none;
-        /* IE10+/Edge */
-        user-select: none;
-        /* Standard */
-    }
-    
-     ::placeholder {
-        /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: var(--black);
-        opacity: 1;
-        /* Firefox */
-    }
-    
-     :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: var(--black);
-    }
-    
-     ::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: var(--black);
-    }
-    
-    .sporteens-active-state {
-        font-weight: bolder;
-        color: brown;
-    }
-    /* register page componen */
-    
-    .register-page-bg {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/register.jpg");
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .my-height {
-        height: 500px;
-    }
-    
-    .my-radius {
-        border-radius: 20px;
-    }
-    
-    .register-font-title {
-        font-size: 24px;
-        color: #707070;
-        font-family: Helvetica Neue;
-    }
-    
-    .button-font {
-        font-size: 18px;
-        color: #707070;
-        font-family: Helvetica Neue;
-    }
-    /* end of register componen */
-    /* Product list componen */
-    
-    .product-list-height {
-        height: 50%;
-    }
-    
-    .product-list-title-font {
-        font-family: Helvetica Neue;
-        font-size: 20px;
-        color: #707070
-    }
-    
-    .product-list-price-font {
-        font-family: Helvetica Neue;
-        font-size: 18px;
-        color: #A0A0A0
-    }
-    /* product details product */
-    
-    .product-details-height {
-        height: 442px;
-    }
-    
-    .product-details-sub-height {
-        height: 83px;
-    }
-    
-    .product-details-font-title {
-        font-size: 28px;
-        font-family: Helvetica Neue;
-        font-weight: bold;
-        color: #707070;
-    }
-    
-    .product-details-font-small {
-        font-size: 20px;
-        font-family: Helvetica Neue;
-        color: #707070;
-    }
-    
-    .my-height {
-        height: 50px
-    }
-    
-    my-gradient {
-        background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ;
-    }
-    
-    .my-position {
-        position: relative;
-        bottom: 0;
-    }
-    /* flash sale */
-    
-    .flash-sale-font {
-        font-family: Helvetica Neue;
-        font-size: 14px;
-        color: #707070
-    }
-    
-    .flash-sale-price {
-        font-family: Helvetica Neue;
-        font-size: 12px;
-        color: #A0A0A0
-    }
-    /* responsive */
-    
-    @media screen and (min-width:768px) {
+        .sporteens-clickable-el {
+            cursor: pointer;
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE10+/Edge */
+            user-select: none;
+            /* Standard */
+        }
+        
+         ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: var(--black);
+            opacity: 1;
+            /* Firefox */
+        }
+        
+         :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: var(--black);
+        }
+        
+         ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: var(--black);
+        }
+        
+        .sporteens-active-state {
+            font-weight: bolder;
+            color: brown;
+        }
+        /* register page componen */
+        
+        .register-page-bg {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/register.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        
         .my-height {
-            height: 688px;
+            height: 500px;
         }
-    }
-    
-    @media screen and (min-width:576px) {
+        
+        .my-radius {
+            border-radius: 20px;
+        }
+        /* register page */
+        
+        .register-font-title {
+            font-size: 24px;
+            color: #707070;
+            font-family: Helvetica Neue;
+        }
+        
+        .button-font {
+            font-size: 18px;
+            color: #707070;
+            font-family: Helvetica Neue;
+        }
+        
+        .register-page-height {
+            height: 100%;
+        }
+        
+        .register-button-disabled {
+            Cursor: text !important;
+            Text-Decoration: None !important;
+        }
+        /* end of register componen */
+        /* Product list componen */
+        
         .product-list-height {
-            height: 300px;
-            width: auto;
+            height: 50%;
         }
+        
         .product-list-title-font {
             font-family: Helvetica Neue;
             font-size: 20px;
             color: #707070
         }
+        
         .product-list-price-font {
             font-family: Helvetica Neue;
             font-size: 18px;
             color: #A0A0A0
         }
-    }
+        /* product details product */
+        
+        .product-details-height {
+            height: 442px;
+        }
+        
+        .product-details-sub-height {
+            height: 83px;
+        }
+        
+        .product-details-font-title {
+            font-size: 28px;
+            font-family: Helvetica Neue;
+            font-weight: bold;
+            color: #707070;
+        }
+        
+        .product-details-font-small {
+            font-size: 20px;
+            font-family: Helvetica Neue;
+            color: #707070;
+        }
+        
+        .my-height {
+            height: 50px
+        }
+        
+        .conditional-height {
+            height: 29px;
+        }
+        
+        my-gradient {
+            background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ;
+        }
+        
+        .my-position {
+            position: relative;
+            bottom: 0;
+        }
+        /* flash sale */
+        
+        .flash-sale-font {
+            font-family: Helvetica Neue;
+            font-size: 14px;
+            color: #707070
+        }
+        
+        .flash-sale-price {
+            font-family: Helvetica Neue;
+            font-size: 12px;
+            color: #A0A0A0
+        }
+        /* cart css */
+        
+        .cart-heading-title {
+            font-size: 50px;
+            font-family: Helvetica Neue;
+            font-weight: bold;
+            color: #707070;
+        }
+        
+        .cart-title-font {
+            font-family: Helvetica Neue;
+            font-size: 20px;
+            color: #222831
+        }
+        
+        .cart-price-font {
+            font-family: Helvetica Neue;
+            font-size: 18px;
+            color: #30475e
+        }
+        
+        .cart-item-height {
+            height: 220px
+        }
+        
+        .cart-bg-color {
+            background-color: #97e5ef;
+            border-radius: 10px;
+        }
+        /* responsive */
+        
+        @media screen and (min-width:768px) {
+            .my-height {
+                height: 688px;
+            }
+        }
+        
+        @media screen and (min-width:576px) {
+            .product-list-height {
+                height: 300px;
+                width: auto;
+            }
+            .product-list-title-font {
+                font-family: Helvetica Neue;
+                font-size: 20px;
+                color: #707070
+            }
+            .product-list-price-font {
+                font-family: Helvetica Neue;
+                font-size: 18px;
+                color: #A0A0A0
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .register-page-height {
+                height: 50vh;
+            }
+        }

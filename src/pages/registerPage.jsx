@@ -57,7 +57,9 @@ class RegisterPage extends Component {
           Axios.post(ApiUrl + "users", dataToSend)
             .then((res) => {
               console.log(res);
+              console.log(res.data.id);
               alert("register success");
+
               window.location = "/create-pass/" + res.data.id;
               localStorage.setItem("id", res.data.id);
             })
@@ -79,31 +81,30 @@ class RegisterPage extends Component {
 
   render() {
     return (
-      <div className="container-fluid ">
+      <div className="container-fluid  register-page-height ">
         <div className="row">
           <div className="col-12 col-md-6 col-md-6 col-lg-6 register-page-bg   d-flex align-items-center justify-content-center"></div>
           <div className=" col-12 col-md-6 col-md-6 col-lg-6 f-darker">
             <div className="  ">
               <div className="my-height row justify-content-center ">
-                <div className="  d-flex flex-column col-9 col-md-11 col-lg-9 align-self-center  ">
+                <div className="  d-flex flex-column col-9 col-md-11 col-lg-9 align-self-center r  ">
                   {this.state.errorMessage ? (
                     <div className="alert alert-danger">
-                      {" "}
-                      {this.state.errorMessage}{" "}
+                      {this.state.errorMessage}
                     </div>
                   ) : null}
                   <p className="align-self-center mb-4 register-font-title font-weight-bold text-capitalize">
                     Daftar disini
                   </p>
                   <input
-                    className="  mb-2 button-font btn btn-outline-primary my-radius form-control    "
+                    className="  mb-2 button-font  text-center  my-radius form-control register-button-disabled   "
                     placeholder=" Masukan Nomor Handphone / Email Mu"
                     ref="emailorPhone"
                     type="text"
                   />
 
                   <input
-                    className="btn btn-outline-dark my-radius button-font text-black-50 text-capitalize "
+                    className="btn btn-outline-primary my-radius button-font text-black-50 text-capitalize "
                     onClick={this.onSubmitClick}
                     type="button"
                     value="submit"
@@ -114,7 +115,7 @@ class RegisterPage extends Component {
                     Atau
                   </p>
                   <input
-                    className="btn btn-outline-primary form-control   mb-2 my-radius button-font text-capitalize "
+                    className="text-center form-control   mb-2 my-radius button-font text-capitalize "
                     placeholder=" Daftar dengan akun Google"
                   />
 

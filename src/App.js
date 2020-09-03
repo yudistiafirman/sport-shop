@@ -12,6 +12,7 @@ import ProductDetails from "./pages/productDetails";
 import CompFooter from "./componen/Footer";
 import CreatePassword from "./pages/createPassword";
 import ListProduct from "./pages/listProduct";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/carts" component={Cart} />
           <Route path="/list-product" component={ListProduct} />
           <Route path="/product-details/:bebas" component={ProductDetails} />
+          <Route path="/checkout" component={CheckoutPage} />
         </Switch>
         <CompFooter />
       </div>

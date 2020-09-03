@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 class Sale extends Component {
   state = {
     discount: null,
-    idr: "IDR",
+    idr: "Rp.",
   };
 
   componentDidMount() {
@@ -26,8 +26,8 @@ class Sale extends Component {
   };
   mapOnData = () => {
     return this.state.discount.map((v) =>
-      v.hasOwnProperty("discount") ? (
-        <div className="col-4 col-sm-4 col-md-2 ">
+      v.discount ? (
+        <div className="d-inline-block mr-2 " style={{ width: "173px" }}>
           <Link to={"/product-details/" + v.id}>
             <img src={v.image1} alt="" className="card-img-top h-75" />
             <div className="flash-sale-font font-weight-bold text-capitalize">
@@ -36,10 +36,13 @@ class Sale extends Component {
           </Link>
 
           <div className="flash-sale-price text-danger">
-            <del>{`${this.state.idr}. ${v.price}`}</del>
-            <span className="font-weight-bolder">{` -${v.discount}%`}</span>
+            <del>{`${this.state.idr}. ${v.price.toLocaleString("id-ID")}`}</del>
+            <span className="font-weight-bolder">{` -${v.discount}%`} Off</span>
             <div className="flash-sale-font font-weight-bold text-warning">
-              {`${this.state.idr} ${v.price - (v.price * v.discount) / 100}`}
+              {`${this.state.idr} ${(
+                v.price -
+                (v.price * v.discount) / 100
+              ).toLocaleString("id-ID")}`}
             </div>
           </div>
         </div>
@@ -64,7 +67,7 @@ class Sale extends Component {
           </div>
         </div>
         <div
-          className="d-flex justify-content-around"
+          className="mt-4 p-3"
           style={{ overflow: "auto", whiteSpace: "nowrap" }}
         >
           {this.state.discount === null ? (

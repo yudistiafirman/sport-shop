@@ -6,11 +6,12 @@ import ApiUrl from "../supports/constant/apiUrl";
 import { Spinner } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 class ListProduct extends Component {
   state = {
     content: null,
-    idr: "IDR.",
+    idr: "Rp.",
   };
   componentDidMount() {
     this.getDataProducts();
@@ -56,17 +57,42 @@ class ListProduct extends Component {
                     className="card-img-top h-50  pt-5 "
                     alt=""
                   />
-                  <div className="card-body">
+                  <div className="card-body ">
                     <div className=" font-weight-bold product-list-title-font text-left">
                       {v.name.slice(0, 20)}
                     </div>
-                    <div className=" product-list-price-font">
-                      {`${this.state.idr} ${v.price}`}
-                    </div>
+                    {v.discount ? (
+                      <div>
+                        <p className="product-list-title-font">
+                          <del>{`Rp.${v.price.toLocaleString("id-ID")}`}</del>
+                          <span className="font-weight-bolder">
+                            {` -${v.discount}%`} Off
+                          </span>
+                          <p className="product-list-title-font font-weight-bold text-warning">
+                            {`Rp.${(
+                              v.price -
+                              (v.price * v.discount) / 100
+                            ).toLocaleString("id-ID")}`}
+                          </p>
+                        </p>
+                      </div>
+                    ) : (
+                      <div>
+                        <div className="conditional-height"></div>
+                        <p className="product-list-title-font font-weight-bold">
+                          Rp.{v.price.toLocaleString("id-ID")}
+                        </p>
+                      </div>
+                    )}
                     <div className="d-flex flex-column pt-3">
-                      <button className="btn btn-outline-dark product-list-title-font font-weight-normal">
-                        See Details
-                      </button>
+                      <Link
+                        className="sporteens-link d-inline-block w-100"
+                        to={"/product-details/" + v.id}
+                      >
+                        <button className="btn btn-outline-dark product-list-title-font font-weight-normal w-100 h-100">
+                          See Details
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
