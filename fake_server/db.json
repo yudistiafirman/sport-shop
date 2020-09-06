@@ -4,7 +4,8 @@
       "phone": "08122089655",
       "email": "",
       "password": "123",
-      "id": 8
+      "id": 8,
+      "total": 88344800
     },
     {
       "email": "yudistia.firman@gmail.com",
@@ -16,7 +17,8 @@
       "email": "firman@yahoo.com",
       "phone": "",
       "password": "123",
-      "id": 10
+      "id": 10,
+      "total": 63144000
     }
   ],
   "products": [
@@ -318,21 +320,21 @@
   "carts": [
     {
       "id_user": "8",
-      "id_product": 2,
-      "qty": 1,
-      "id": 1
-    },
-    {
-      "id_user": "8",
       "id_product": 1,
-      "qty": 1,
+      "qty": 5,
       "id": 2
     },
     {
       "id_user": "10",
       "id_product": 2,
-      "qty": 1,
+      "qty": 0,
       "id": 3
+    },
+    {
+      "id_user": "8",
+      "id_product": 4,
+      "qty": 4,
+      "id": 4
     }
   ]
 }

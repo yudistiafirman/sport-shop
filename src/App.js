@@ -24,7 +24,7 @@ function App() {
           <Route path="/register" component={RegisterPage} />
           <Route path="/create-pass" component={CreatePassword} />
           <Route path="/brands" component={Brand} />
-          <Route path="/carts" component={Cart} />
+          <Route path="/carts/" component={Cart} />
           <Route path="/list-product" component={ListProduct} />
           <Route path="/product-details/:bebas" component={ProductDetails} />
           <Route path="/checkout" component={CheckoutPage} />

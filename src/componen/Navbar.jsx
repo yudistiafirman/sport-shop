@@ -32,7 +32,7 @@ class Navbar extends Component {
 
   getIdUser = () => {
     var id = localStorage.getItem("id");
-    console.log(id);
+
     if (id) {
       this.setState({ isLogin: true });
       Axios.get(ApiUrl + "users/" + id)

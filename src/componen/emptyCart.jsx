@@ -3,7 +3,7 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Label } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-function emptyCart() {
+function EmptyCart() {
   return (
     <div>
       <div
@@ -28,4 +28,4 @@ function emptyCart() {
     </div>
   );
 }
-export default emptyCart;
+export default EmptyCart;

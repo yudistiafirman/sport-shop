@@ -11,12 +11,23 @@ import { ModalBody, ModalFooter } from "reactstrap";
 import { Link } from "react-router-dom";
 import PhoneNumberValidator from "../supports/function/phoneValid";
 import EmailValidator from "../supports/function/emailValid";
+import {
+  MDBContainer,
+  MDBBtn,
+  MDBModal,
+  MDBModalBody,
+  MDBModalHeader,
+  MDBModalFooter,
+} from "mdbreact";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import "mdbreact/dist/css/mdb.css";
 class ProductDetails extends Component {
   state = {
     data: null,
     image: "",
-    isLogin: false,
+
+    modal: false,
   };
 
   componentDidMount() {
@@ -57,8 +68,9 @@ class ProductDetails extends Component {
             id_product: product_id,
             qty: 1,
           }).catch((err) => console.log(err));
+          window.location = "/carts/";
         } else {
-          alert("your selected have been added to cart,please check the cart");
+          this.setState({ modal: !this.state.modal });
         }
       })
       .catch((err) => {
@@ -113,9 +125,14 @@ class ProductDetails extends Component {
       if (res.data.length === 0) {
         alert("anda belum register silahkan register");
       } else {
-        window.location = "/product-details/" + id;
+        window.location = "/carts/" + id;
         localStorage.setItem("id", res.data[0].id);
       }
+    });
+  };
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal,
     });
   };
 
@@ -125,6 +142,33 @@ class ProductDetails extends Component {
     }
     return (
       <div>
+        <MDBContainer>
+          <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
+            <MDBModalHeader toggle={this.toggle}>
+              <h5>Sport shop</h5>
+            </MDBModalHeader>
+            <MDBModalBody>
+              You've been added this selected product to cart
+            </MDBModalBody>
+            <MDBModalFooter>
+              <MDBBtn
+                color="secondary"
+                onClick={() =>
+                  this.toProductList((window.location = "/list-product"))
+                }
+              >
+                Continue Shopping
+              </MDBBtn>
+              <MDBBtn
+                onClick={() => this.toCartPage((window.location = "/carts"))}
+                color="primary"
+              >
+                {" "}
+                Check your Cart??
+              </MDBBtn>
+            </MDBModalFooter>
+          </MDBModal>
+        </MDBContainer>
         <div className="container py-5">
           <div className="row">
             <div className="col-md-5">
