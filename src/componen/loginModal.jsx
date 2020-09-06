@@ -3,6 +3,8 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 import ApiUrl from "../supports/constant/apiUrl";
+import PhoneNumberValidator from "../supports/function/phoneValid";
+import EmailValidator from "../supports/function/emailValid";
 
 class LoginModal extends Component {
   state = {
@@ -13,9 +15,17 @@ class LoginModal extends Component {
     var passData = this.refs.passwordData.value;
 
     if (Number(data[0] >= 0)) {
-      this.sendData({ phone: data, email: "" }, { password: passData });
+      if (PhoneNumberValidator(data) === true) {
+        this.sendData({ phone: data, email: "" }, { password: passData });
+      } else {
+        alert(PhoneNumberValidator(data));
+      }
     } else {
-      this.sendData({ email: data, phone: "" }, { password: passData });
+      if (EmailValidator(data) === true) {
+        this.sendData({ email: data, phone: "" }, { password: passData });
+      } else {
+        alert(EmailValidator(data));
+      }
     }
   };
 
@@ -38,9 +48,9 @@ class LoginModal extends Component {
     ).then((res) => {
       console.log(res.data);
       if (res.data.length === 0) {
-        alert("anda belum login silahkan login");
+        alert("anda belum register silahkan ");
       } else {
-        window.location = "/landingpage/" + res.data[0].id;
+        window.location = "/";
         localStorage.setItem("id", res.data[0].id);
       }
     });

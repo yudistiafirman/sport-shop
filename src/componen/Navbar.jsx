@@ -10,15 +10,19 @@ import { Link } from "react-router-dom";
 import Axios from "axios";
 import ApiUrl from "../supports/constant/apiUrl";
 import LoginModal from "../componen/loginModal";
+import { Label } from "semantic-ui-react";
+
 class Navbar extends Component {
   state = {
     openToggle: false,
     isLogin: false,
     data: null,
+    label: 0,
   };
 
   componentDidMount() {
     this.getIdUser();
+    this.getCartNotif();
   }
 
   onLogout = () => {
@@ -51,6 +55,13 @@ class Navbar extends Component {
     // get value di localstorage
     // kalau value ada
     // set is login = true
+  };
+  getCartNotif = () => {
+    Axios.get(ApiUrl + "carts?").then((res) => {
+      console.log(res.data);
+
+      this.setState({ label: res.data });
+    });
   };
 
   render() {
@@ -87,7 +98,10 @@ class Navbar extends Component {
                 <span>
                   <span className="mr-md-3 sporteens-clickable-el">
                     <Link to="/carts" className="sporteens-link">
-                      <FontAwesomeIcon icon={faShoppingCart} />
+                      <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+                      <Label pointing="left" color="red">
+                        {this.state.label.length}
+                      </Label>
                     </Link>
                   </span>
                   <span className="d-inline-block mr-md-3 sporteens-clickable-el">
@@ -98,6 +112,7 @@ class Navbar extends Component {
                       alt="avatar-circle"
                     />
                     <Link
+                      to="/"
                       onClick={this.onLogout}
                       className="sporteens-link h-100 d-inline-block"
                     >

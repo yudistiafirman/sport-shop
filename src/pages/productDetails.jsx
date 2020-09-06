@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import "../supports/css/componen.css";
-import LoginModal from "../componen/loginModal";
+import AddtoCartModal from "../componen/addtoCartModal";
 import Axios from "axios";
 import apiUrl from "../supports/constant/apiUrl";
 import LoadingPage from "../componen/LoadingPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import ApiUrl from "../supports/constant/apiUrl";
+import { ModalBody, ModalFooter } from "reactstrap";
+import { Link } from "react-router-dom";
+import PhoneNumberValidator from "../supports/function/phoneValid";
+import EmailValidator from "../supports/function/emailValid";
 
 class ProductDetails extends Component {
   state = {
@@ -37,8 +42,81 @@ class ProductDetails extends Component {
     if (id) {
       this.setState({ isLogin: true });
     } else {
-      alert("anda harus login dulu bosku");
     }
+  };
+
+  addTocCart = (product_id) => {
+    var id = localStorage.getItem("id");
+    console.log(product_id);
+    console.log(id);
+    Axios.get(ApiUrl + "carts?id_user=" + id + "&id_product=" + product_id)
+      .then((res) => {
+        if (res.data.length === 0) {
+          Axios.post(apiUrl + "carts", {
+            id_user: id,
+            id_product: product_id,
+            qty: 1,
+          }).catch((err) => console.log(err));
+        } else {
+          alert("your selected have been added to cart,please check the cart");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  modalOnSubmitBtn = (product_id) => {
+    var data = this.refs.emaildata.value;
+    var passData = this.refs.passwordData.value;
+
+    if (Number(data[0] >= 0)) {
+      if (PhoneNumberValidator(data) === true) {
+        this.sendData(
+          { phone: data, email: "" },
+          { password: passData },
+          product_id,
+        );
+      } else {
+        alert(PhoneNumberValidator(data));
+      }
+    } else {
+      if (EmailValidator(data) === true) {
+        this.sendData(
+          { email: data, phone: "" },
+          { password: passData },
+          product_id,
+        );
+      } else {
+        alert(EmailValidator(data));
+      }
+    }
+  };
+
+  sendData = (data_email, data_password, id) => {
+    var datatype = data_email.phone ? "phone" : "email";
+    var dataValue = data_email.phone ? data_email.phone : data_email.email;
+    var dataPassType = "password";
+    var dataPassValue = data_password.password;
+
+    Axios.get(
+      ApiUrl +
+        "users?" +
+        datatype +
+        "=" +
+        dataValue +
+        "&" +
+        dataPassType +
+        "=" +
+        dataPassValue,
+    ).then((res) => {
+      console.log(res.data);
+      if (res.data.length === 0) {
+        alert("anda belum register silahkan register");
+      } else {
+        window.location = "/product-details/" + id;
+        localStorage.setItem("id", res.data[0].id);
+      }
+    });
   };
 
   render() {
@@ -144,22 +222,56 @@ class ProductDetails extends Component {
                 <div className="d-flex flex-column col-6 col-md-9">
                   {this.state.isLogin ? (
                     <input
+                      onClick={() => this.addTocCart(this.state.data.id)}
                       type="button"
                       value="Add To Cart"
                       className="btn rounded-0 w-100 sporteens-bg-main text-white"
                     />
                   ) : (
-                    <LoginModal
-                      isi="Add to cart"
+                    <AddtoCartModal
+                      isi="addTocart"
                       className="btn rounded-0 w-100 sporteens-bg-main text-white"
-                    />
+                    >
+                      <ModalBody>
+                        <input
+                          type="text"
+                          placeholder="enter your phone / email"
+                          className="form-control"
+                          ref="emaildata"
+                        />
+                        <input
+                          type="password"
+                          placeholder="enter your password"
+                          className="form-control mt-3"
+                          ref="passwordData"
+                        />
+                        <input
+                          type="button"
+                          className="btn btn-info mt-4"
+                          onClick={() =>
+                            this.modalOnSubmitBtn(this.state.data.id)
+                          }
+                          value="submit"
+                        />
+                      </ModalBody>
+                      <ModalFooter>
+                        <p className="text-center sporteens-font-14">
+                          Don't have account yet?
+                          <Link to="/register" className="sporteens-link">
+                            <span className="sporteens-clickable-el sporteens-main-dark font-weight-bold">
+                              Register here
+                            </span>
+                          </Link>
+                        </p>
+                      </ModalFooter>
+                    </AddtoCartModal>
                   )}
                 </div>
                 <div className="d-flex flex-column col-6 col-md-3 ">
                   {this.state.isLogin ? (
                     <FontAwesomeIcon icon={faHeart} className="text-danger" />
                   ) : (
-                    <LoginModal
+                    <AddtoCartModal
                       isi={
                         <FontAwesomeIcon
                           icon={faHeart}

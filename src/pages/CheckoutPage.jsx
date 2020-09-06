@@ -113,18 +113,30 @@ export class CheckoutPage extends Component {
                   </span>
                   <div className="d-flex">
                     <Button
+                      animated="vertical"
                       basic
                       color="black"
-                      className="w-50 font-weight-bold "
+                      className="font-weight-bold w-50"
                     >
-                      Pay
+                      <Button.Content basic hidden>
+                        Rp.2.500.000
+                      </Button.Content>
+                      <Button.Content basic visible>
+                        Pay Now
+                      </Button.Content>
                     </Button>
                     <Button
+                      animated="vertical"
                       basic
                       color="black"
-                      className="w-50 font-weight-bold "
+                      className="font-weight-bold w-50"
                     >
-                      Pay with BitCoin
+                      <Button.Content basic hidden>
+                        0.5 BTC
+                      </Button.Content>
+                      <Button.Content basic visible>
+                        Pay with bitCoin
+                      </Button.Content>
                     </Button>
                   </div>
                 </Segment>
